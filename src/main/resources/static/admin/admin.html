@@ -1,0 +1,26 @@
+<div class="container" ng-controller="AdminCtrl as adminCtrl" data-ng-init="adminCtrl.loadCon()">
+    <table class="table">
+        <thead>
+        <tr>
+            <th style="width: 10%">Username</th>
+            <th style="width: 50%">Password (Bcrypt-Hash)</th>
+            <th style="width: 10%">Role</th>
+            <th style="width: 5%">Enabled</th>
+            <th style="width: 25%">Action</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr ng-repeat="x in adminCtrl.users">
+            <td>{{ x.username }}</td>
+            <td>{{ x.password }}</td>
+            <td>{{ x.role}}</td>
+            <td>{{ x.enabled}}</td>
+            <td>
+                <button type="button" class="btn btn-success btn-sm" ng-click="adminCtrl.changeRole(x.id)">Role</button>
+                <button type="button" class="btn btn-warning btn-sm" ng-click="adminCtrl.changeStatus(x.id)">Enabled</button>
+            <button type="button" class="btn btn-danger btn-sm" ng-click="adminCtrl.delUser(x.id)">Delete</button>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+</div>
