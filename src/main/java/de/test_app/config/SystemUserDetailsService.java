@@ -1,6 +1,5 @@
 package de.test_app.config;
 
-import de.test_app.model.SpringSecurityUser;
 import de.test_app.model.User;
 import de.test_app.repo.UserRepo;
 import org.springframework.beans.factory.annotation.Autowired;

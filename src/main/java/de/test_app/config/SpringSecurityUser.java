@@ -1,5 +1,6 @@
-package de.test_app.model;
+package de.test_app.config;
 
+import de.test_app.model.User;
 import lombok.Getter;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;

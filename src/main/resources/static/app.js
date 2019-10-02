@@ -1,4 +1,5 @@
 var app = angular.module("App", [
     'state',
-    'admin'
+    'admin',
+    'test'
 ]);

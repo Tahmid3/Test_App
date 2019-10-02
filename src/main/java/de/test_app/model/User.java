@@ -3,12 +3,10 @@ package de.test_app.model;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import lombok.ToString;
 
 import javax.persistence.*;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
-import javax.validation.valueextraction.ExtractedValue;
 
 /**
  * --- User Model for login system ---
