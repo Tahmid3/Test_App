@@ -17,7 +17,7 @@ app.controller("AdminCtrl", function ($http) {
     };
 
     controller.delUser = function (id) {
-        $http.get("/delUser/" + id).then(function () {
+        $http.put("/delUser/" + id).then(function () {
             controller.loadCon();
         }, function (reason) {
             window.alert("Error");
@@ -25,7 +25,7 @@ app.controller("AdminCtrl", function ($http) {
     };
 
     controller.changeStatus = function (id) {
-        $http.get("/changeStatus/" + id).then(function () {
+        $http.put("/changeStatus/" + id).then(function () {
             controller.loadCon();
         }, function (reason) {
             window.alert("Error");
@@ -33,7 +33,7 @@ app.controller("AdminCtrl", function ($http) {
     };
 
     controller.changeRole = function (id) {
-        $http.get("/changeRole/" + id).then(function () {
+        $http.put("/changeRole/" + id).then(function () {
             controller.loadCon();
         }, function (reason) {
             window.alert("Error");

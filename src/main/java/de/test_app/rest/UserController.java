@@ -51,13 +51,13 @@ public class UserController {
         return ResponseEntity.ok().body(allUsers);
     }
 
-    @RequestMapping(method = RequestMethod.GET, value = "/delUser/{id}")
+    @RequestMapping(method = RequestMethod.PUT, value = "/delUser/{id}")
     private ResponseEntity delUser(@PathVariable long id) {
         userRepo.deleteById(id);
         return ResponseEntity.ok().body(null);
     }
 
-    @RequestMapping(method = RequestMethod.GET, value = "/changeStatus/{id}")
+    @RequestMapping(method = RequestMethod.PUT, value = "/changeStatus/{id}")
     private ResponseEntity changeStatus(@PathVariable long id) {
 
         Optional<User> currentUser = userRepo.findById(id);
@@ -76,7 +76,7 @@ public class UserController {
         return ResponseEntity.ok().body(null);
     }
 
-    @RequestMapping(method = RequestMethod.GET, value = "/changeRole/{id}")
+    @RequestMapping(method = RequestMethod.PUT, value = "/changeRole/{id}")
     private ResponseEntity changeRole(@PathVariable long id) {
 
         Optional<User> currentUser = userRepo.findById(id);
