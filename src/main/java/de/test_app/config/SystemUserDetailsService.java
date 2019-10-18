@@ -26,7 +26,7 @@ public class SystemUserDetailsService implements UserDetailsService {
 
         final User user = userRepo.findByUsername(username);
 
-        if(user == null) {
+        if (user == null) {
             throw new UsernameNotFoundException(username);
         } else {
             return new SpringSecurityUser(user, username);

@@ -19,7 +19,6 @@ public class SpringSecurityUser implements UserDetails {
 
     @Getter
     private final User user;
-
     private final String username;
 
     @Getter
